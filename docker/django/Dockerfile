@@ -18,7 +18,7 @@ RUN pip install -r requirements.txt
 
 
 # Copy the Django project files to the container
-COPY . /app
+COPY development/ /app
 
 # Run the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["project/python", "manage.py", "runserver", "0.0.0.0:8000"]
