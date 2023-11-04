@@ -21,4 +21,4 @@ RUN pip install -r requirements.txt
 COPY Django/ /app
 
 # Run the Django development server
-CMD ["project/python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["cd projects && python manage.py runserver 0.0.0.0:8000"]
