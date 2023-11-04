@@ -5,7 +5,7 @@ WORKDIR /app
 # Update and upgrade the package list
 RUN apt-get update -y \
   && apt-get upgrade -y \
-  && apt-get install libmysqlclient-dev default-libmysqlclient-dev -y \
+  && apt-get install libmysqlclient-dev default-libmysqlclient-dev pkg-config -y \
   && rm -rf /var/lib/apt/lists/*
 
 COPY project/requirements.txt
