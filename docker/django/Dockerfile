@@ -11,7 +11,6 @@ RUN apt-get update -y \
 COPY project/requirements.txt
 
 # Install Django and its dependencies
-RUN pip install mysqlclient
 RUN pip install -r requirements.txt
 
 # Create a working directory for the Django project
