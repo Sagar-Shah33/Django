@@ -21,6 +21,3 @@ COPY Django/ /app
 
 # Run the Django development server
 CMD ["cd projects && python manage.py runserver 0.0.0.0:8000"]
-
-
-s
