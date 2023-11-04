@@ -2,7 +2,9 @@
 FROM python:3.10.2-slim
 
 # Update and upgrade the package list
-RUN apt update && apt upgrade
+RUN apt-get update -y \
+  && apt-get upgrade -y \
+  && rm -rf /var/lib/apt/lists/*
 
 # Install Django and its dependencies
 RUN pip install django
