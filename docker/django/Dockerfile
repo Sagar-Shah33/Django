@@ -8,7 +8,7 @@ RUN apt-get update -y \
   && apt-get install libmysqlclient-dev default-libmysqlclient-dev pkg-config -y \
   && rm -rf /var/lib/apt/lists/*
 
-COPY project/requirements.txt
+COPY Django/project/requirements.txt .
 
 # Install Django and its dependencies
 RUN pip install -r requirements.txt
